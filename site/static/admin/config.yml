@@ -45,7 +45,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "الملخص", name: "summary", widget: "text", required: false}
       - {label: "الصورة", name: "image", widget: "image", required: false}
       - {label: "المقال", name: "body", widget: "markdown"}
-      - {label: "معرض صور", name: gallery, widget: list, fields: [
+      - {label: "معرض صور", name: gallery, widget: list, required: false, fields: [
               {label: "صورة", name: "image", widget: "image"},
               {label: "عنوان", name: "text", widget: "string"}]}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
