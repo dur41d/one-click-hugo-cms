@@ -1,5 +1,4 @@
 ---
-title: Saadi Yousif
-name: سعدي يوسف
+title: سعدي يوسف
 ---
 
