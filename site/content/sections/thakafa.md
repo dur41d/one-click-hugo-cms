@@ -1,5 +1,0 @@
----
-title: thakafa
-label: ثقافة
----
-

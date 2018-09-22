@@ -1,5 +1,0 @@
----
-title: saha
-label: صحة
----
-
