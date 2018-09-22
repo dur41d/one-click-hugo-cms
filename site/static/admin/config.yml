@@ -13,15 +13,20 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "English Name", name: "title", widget: "string"} 
       - {label: "الاسم", name: "name", widget: "string"}
+      - {label: "الصورة", name: "image", widget: "image", required: false}
+      - {label: "نبذة", name: "summary", widget: "text", required: false}
+      - {label: "Email", name: "email", widget: "text", required: false}
+      - {label: "Facebook", name: "facebook", widget: "text", required: false}
+      - {label: "Twitter", name: "twitter", widget: "text", required: false}
   - name: "articles" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Articles" # Used in the UI, ie.: "New Post"
     folder: "site/content/articles" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields: # The fields each document in this collection have
-      - {label: "Old ID", name: "old_id", widget: "string", required: false}     # the id used in old maakom site.. kept here to keep the old linkds working
-      - {label: "Title", name: "title", widget: "string"}     
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-mm-dd"}     
+      - {label: "Old ID", name: "old_id", widget: "hidden", required: false}     # the id used in old maakom site.. kept here to keep the old linkds working
+      - {label: "العنوان", name: "title", widget: "string"}     
+      - {label: "التاريخ", name: "date", widget: "datetime", format: "YYYY-mm-dd"}     
       - label: "القسم"
         name: "section"
         widget: "select"
@@ -29,16 +34,20 @@ collections: # A list of collections the CMS should be able to edit
           - { label: "الرئيسية", value: "main" }
           - { label: "ثقافة", value: "thakafa" }
           - { label: "صحة", value: "saha" }
-      - label: "الكاتب"
+      - label: "المؤلف"
         name: "author"
         widget: "relation"
         collection: "authors"
         searchFields: ["title", "name"]
         valueField: "title"
         displayFields: ["name"]
-      - {label: "Summary", name: "summary", widget: "text", required: false}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "المؤلف 2", name: "authorText", widget: "string", required: false}   
+      - {label: "الملخص", name: "summary", widget: "text", required: false}
+      - {label: "الصورة", name: "image", widget: "image", required: false}
+      - {label: "المقال", name: "body", widget: "markdown"}
+      - {label: "معرض صور", name: gallery, widget: list, fields: [
+              {label: "صورة", name: "image", widget: "image"},
+              {label: "عنوان", name: "text", widget: "text"}]}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
