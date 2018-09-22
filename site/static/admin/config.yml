@@ -11,13 +11,13 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection   
     slug: "{{slug}}" 
     fields: # The fields each document in this collection have
-      - {label: "English Name", name: "title", widget: "string"} 
+      - {label: "Title", name: "title", widget: "string"}     
       - {label: "الاسم", name: "name", widget: "string"}
       - {label: "الصورة", name: "image", widget: "image", required: false}
       - {label: "نبذة", name: "summary", widget: "text", required: false}
-      - {label: "Email", name: "email", widget: "text", required: false}
-      - {label: "Facebook", name: "facebook", widget: "text", required: false}
-      - {label: "Twitter", name: "twitter", widget: "text", required: false}
+      - {label: "Email", name: "email", widget: "string", required: false}
+      - {label: "Facebook", name: "facebook", widget: "string", required: false}
+      - {label: "Twitter", name: "twitter", widget: "string", required: false}
   - name: "articles" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Articles" # Used in the UI, ie.: "New Post"
     folder: "site/content/articles" # The path to the folder where the documents are stored
@@ -26,7 +26,7 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Old ID", name: "old_id", widget: "hidden", required: false}     # the id used in old maakom site.. kept here to keep the old linkds working
       - {label: "العنوان", name: "title", widget: "string"}     
-      - {label: "التاريخ", name: "date", widget: "datetime", format: "YYYY-mm-dd"}     
+      - {label: "التاريخ", name: "date", widget: "date"}     
       - label: "القسم"
         name: "section"
         widget: "select"
@@ -47,7 +47,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "المقال", name: "body", widget: "markdown"}
       - {label: "معرض صور", name: gallery, widget: list, fields: [
               {label: "صورة", name: "image", widget: "image"},
-              {label: "عنوان", name: "text", widget: "text"}]}
+              {label: "عنوان", name: "text", widget: "string"}]}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
