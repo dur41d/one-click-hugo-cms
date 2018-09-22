@@ -8,9 +8,9 @@ collections: # A list of collections the CMS should be able to edit
   - name: "sections" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Sections" # Used in the UI, ie.: "New Post"
     folder: "site/content/sections" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    create: false # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Name", name: "name", widget: "string"} 
+      - {label: "Title", name: "title", widget: "string"} 
       - {label: "Label", name: "label", widget: "string"}     
   - name: "articles" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Articles" # Used in the UI, ie.: "New Post"
@@ -23,8 +23,8 @@ collections: # A list of collections the CMS should be able to edit
         name: "section"
         widget: "relation"
         collection: "sections"
-        searchFields: ["name", "label"]
-        valueField: "name"
+        searchFields: ["title", "label"]
+        valueField: "title"
         displayFields: ["label"]
       - {label: "Summary", name: "summary", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
