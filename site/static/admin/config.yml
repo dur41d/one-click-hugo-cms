@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "relation"
         collection: "authors"
         searchFields: ["title"]
-        valueField: "slug"
+        valueField: "title"
         displayFields: ["title"]
       - {label: "المؤلف 2", name: "authorText", widget: "string", required: false}   
       - {label: "الملخص", name: "summary", widget: "text", required: false}
