@@ -11,13 +11,14 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection   
     slug: "{{slug}}" 
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}     
-      - {label: "الاسم", name: "name", widget: "string"}
+      - {label: "الاسم", name: "title", widget: "string"}
       - {label: "الصورة", name: "image", widget: "image", required: false}
-      - {label: "نبذة", name: "summary", widget: "text", required: false}
+      - {label: "الاسم 2", name: "title2", widget: "string"}
+      - {label: "العنوان", name: "address", widget: "string"}
       - {label: "Email", name: "email", widget: "string", required: false}
       - {label: "Facebook", name: "facebook", widget: "string", required: false}
       - {label: "Twitter", name: "twitter", widget: "string", required: false}
+      - {label: "نبذة", name: "summary", widget: "markdown", required: false}
   - name: "articles" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Articles" # Used in the UI, ie.: "New Post"
     folder: "site/content/articles" # The path to the folder where the documents are stored
@@ -38,9 +39,9 @@ collections: # A list of collections the CMS should be able to edit
         name: "author"
         widget: "relation"
         collection: "authors"
-        searchFields: ["title", "name"]
+        searchFields: ["title", "title2"]
         valueField: "title"
-        displayFields: ["name"]
+        displayFields: ["title", "title2"]
       - {label: "المؤلف 2", name: "authorText", widget: "string", required: false}   
       - {label: "الملخص", name: "summary", widget: "text", required: false}
       - {label: "الصورة", name: "image", widget: "image", required: false}
