@@ -2,12 +2,391 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-{{ partial "short-text" .Params.blurb}}
+<div class="container">
+    <!-- Main Left side -->
+    <div class="main-left-side">
+        <!-- News slider -->
+        <div class="qk-slider float-width">
+            <h3 class="sldr-title">الاخبـــــار</h3>
+            <div class="flexslider news-sldr" style="direction: ltr;text-align: right;">
+                <ul class="slides">
+                    <li>
+                        <div class="trans2 slide-sngl">
+                            <a class="text-center" href="#"><img alt="" src="img/icon7.jpg" /></a>
+                            <h4><a href="#"></a></h4>
+                            <strong class="text-center"><a href="#">علماء يعلنون عن فوائد جديدة للقهوة!</a></strong>
+                            <br /><span style="margin-top: 3px;display: block;">وجدان عبدالعزيز</span>
+                            <h6><span>20 Jan 2014<i class="fa fa-clock-o"></i></span></h6>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trans2 slide-sngl">
+                            <a class="text-center" href="#"><img alt="" src="img/icon6.jpg" /></a>
+                            <h4><a href="#"></a></h4>
+                            <strong class="text-center"><a href="#"> وداعا ًللشاعر والروائي والرحالة العُماني محمد
+                                    الحارثي</a></strong>
+                            <br /><span style="margin-top: 3px;display: block;">وجدان عبدالعزيز</span>
+                            <h6><span>20 Jan 2014<i class="fa fa-clock-o"></i></span></h6>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trans2 slide-sngl">
+                            <a class="text-center" href="#"><img alt="" src="img/icon5.jpg" /></a>
+                            <h4><a href="#"></a></h4>
+                            <strong class="text-center"><a href="#">صدور رواية « العـودة » لهيثم نافل والي</a></strong>
+                            <br /><span style="margin-top: 3px;display: block;">وجدان عبدالعزيز</span>
+                            <h6><span>20 Jan 2014<i class="fa fa-clock-o"></i></span></h6>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trans2 slide-sngl">
+                            <a class="text-center" href="#"><img alt="" src="img/icon3.jpg" /></a>
+                            <h4><a href="#"></a></h4>
+                            <strong class="text-center"><a href="#">وفاة المؤرخ "برنارد لويس" المتخصص في شؤون العرب
+                                    والإسلام</a></strong>
+                            <br /><span style="margin-top: 3px;display: block;">وجدان عبدالعزيز</span>
+                            <h6><span>20 Jan 2014<i class="fa fa-clock-o"></i></span></h6>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trans2 slide-sngl">
+                            <a class="text-center" href="#"><img alt="" src="img/icon4.jpg" /></a>
+                            <h4><a href="#"></a></h4>
+                            <strong class="text-center"><a href="#">الصين تصنع أضخم طائرة ركاب في العالم</a></strong>
+                            <br /><span style="margin-top: 3px;display: block;">وجدان عبدالعزيز</span>
+                            <h6><span>20 Jan 2014<i class="fa fa-clock-o"></i></span></h6>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trans2 slide-sngl">
+                            <a class="text-center" href="#"><img alt="" src="img/icon8.jpg" /></a>
+                            <h4><a href="#"></a></h4>
+                            <strong class="text-center"><a href="#">الفيلم الياباني (شوب ليفترز) يفوز بجائزة السعفة
+                                    الذهبية في مهرجان كان</a></strong>
+                            <br /><span style="margin-top: 3px;display: block;">وجدان عبدالعزيز</span>
+                            <h6><span>20 Jan 2014<i class="fa fa-clock-o"></i></span></h6>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trans2 slide-sngl">
+                            <a class="text-center" href="#"><img alt="" src="img/icon2.jpg" /></a>
+                            <h4><a href="#"></a></h4>
+                            <strong class="text-center"><a href="#">الأزهر يشكّل فريقاً غنائياً لأول مرة... هل انفتح
+                                    أخيراً على الفن؟</a></strong>
+                            <br /><span style="margin-top: 3px;display: block;">وجدان عبدالعزيز</span>
+                            <h6><span>20 Jan 2014<i class="fa fa-clock-o"></i></span></h6>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trans2 slide-sngl">
+                            <a class="text-center" href="#"><img alt="" src="img/icon.jpg" /></a>
+                            <h4><a href="#"></a></h4>
+                            <strong class="text-center"><a href="#">رحيل مديحة يسري عن 97 عاماً</a></strong>
+                            <br /><span style="margin-top: 3px;display: block;">وجدان عبدالعزيز</span>
+                            <h6><span>20 Jan 2014<i class="fa fa-clock-o"></i></span></h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="#">
+                <h3 class="text-center"><strong>إضغط هنا لمشاهدة أرشيف الأخبار</strong></h3>
+            </a>
+        </div>
+        <!-- Include the above in your HEAD tag ---------->
+        <!-- Sec 1 -->
 
-{{ partial "2-up" .Params }}
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+        <div class="news-sec-1 float-width">
+            <div class="float-width sec-cont2">
+                <h3 class="sec-title">لوريم ايبسوم</h3>
+                <div class="sec-1-big float-width">
+                    <img alt="" class="blocky" src="img/14334.jpg">
+                    <div class="sec-1-big-text lefty">
+                        <h3>مَنْ يلعب بالحبال التي تكادُ تتقطّع</h3>
+                        <h6><span><i class="fa fa-user"></i>وجدى غنيم</span><span><i class="fa fa-clock-o"></i>20 يناير
+                                2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في مخطوط “ البيت الأسود “، يرمز الديناصور، / أوالشخص الخفيّ المُبْهم بالجلباب - زي عصابة “
+                            كو كلوكس كلان “ الأمريكية - الى “ اليوسيفير “ // إبليس ... آلهة الأرض تجسيداً بشرياً
+                            للشيطان
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
 
-{{ partial "blog" . }}
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+                <div class="sec-1-sm">
+                    <img alt="" class="blocky" src="img/14339.jpg">
+                    <div class="sec-1-sm-text blocky">
+                        <h3>خواطر حول الوجه الثقافي للسياحة</h3>
+
+                        <h6> <span class="text-muted"><i class="fa fa-user"></i>وجدان عبدالعزيز</span><span><i class="fa fa-clock-o"></i>20
+                                يناير 2014</span><span><i class="fa fa-comment-o"></i>21 تعليق</span></h6>
+                        <p>
+                            في ظل السعي الدؤوب للدول والحكومات علي مواجهة الفكر المتطرف وبذل الجهود من أجل القضاء عليه
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Main Right side -->
+    <div class="main-right-side">
+        <!-- Trending news right -->
+        <!--<h3 class="sm-sldr-title">اختـرنـا لكـم</h3>-->
+        <h3 class="sec-title">أخترنا لكم</h3>
+        <div class="flex-container">
+            <div class="flexslider hm-slider">
+                <ul class="slides">
+                    <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+                        <img alt="" src="img/133.jpg" draggable="false">
+                        <div class="hm-sldr-caption">
+                            <h3><a href="#">مدينة صنعاء</a></h3>
+                            <p>
+                            </p>
+                        </div>
+                    </li>
+                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"
+                        class="flex-active-slide">
+                        <img alt="" src="img/134.jpg" draggable="false">
+                        <div class="hm-sldr-caption">
+                            <h3><a href="#">"تولوز.... أغنية أخيرة لأكورديون وحيد" </a></h3>
+                            <p>
+                            </p>
+                        </div>
+                    </li>
+                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"
+                        class="">
+                        <img alt="" src="img/135.jpg" draggable="false">
+
+                        <div class="hm-sldr-caption">
+                            <h3><a href="#">شالة اهم المواقع الأثرية</a></h3>
+                            <p>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="flex-direction-nav">
+                    <li><a class="flex-prev" href="#"></a></li>
+                    <li><a class="flex-next" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="partners">
+            <h2>مواقع صديقة</h2>
+            <ul>
+                <li><a href="#">- ذوات صحيفة فكرية ثقافية</a></li>
+                <li><a href="#">- موقع علي عبد الأمير عجام</a></li>
+                <li><a href="#">- موقع الفنان طارق المعروف</a></li>
+                <li><a href="#">- موقع الفنان خالد الجادر</a></li>
+            </ul>
+        </div>
+
+        <div class="news-sec-2 float-width">
+            <div class="float-width sec-cont3">
+                <div class="polls-cont">
+                    <h3 class="sec-title text-left">لوريم ايبسوم</h3>
+                    <div class="polls-left blocky">
+                        <a href="#"><img alt="" class="polls-bg-img" src="img/401683.jpeg" style="display: inline-block;float: left;width: 50%;"
+                                height="150px"></a>
+                        <br>
+                        <h3 class="sec-title1 text-left">بقلم سعدي جوهر</h3>
+                        <div class="pol-lft-txt">
+                            <h6><span><i class="fa fa-comment-o"></i>21 عدد المقالات</span></h6>
+                            <p class="float-width"></p>
+                        </div>
+
+                    </div>
+                    <div class="polls-right lefty">
+                        <div class="pol-rt-sm float-width">
+                            <a href="#" class="lefty pol-rt-img"><img alt="" src="img/samples/m1.jpg"></a>
+                            <h5 class="text-right">لوريم ايبسوم</h5>
+                            <br><br>
+                            <h6 class="lefty"><span><i class="fa fa-clock-o"></i>20 يناير 2014</span><span><i class="fa fa-comment-o"></i>21
+                                    تعليق</span></h6>
+
+                        </div>
+                        <div class="pol-rt-sm float-width">
+                            <a href="#" class="lefty pol-rt-img"><img alt="" src="img/samples/m2.jpg"></a>
+                            <h5>لوريم ابيسوم</h5>
+                            <br><br>
+                            <h6 class="lefty"><span><i class="fa fa-clock-o"></i>20 يناير 2014</span><span><i class="fa fa-comment-o"></i>21
+                                    تعليق</span></h6>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lefty ad-rt">
+            <a href="#"><img alt="" src="img/samples/u1.jpg"></a>
+        </div>
+
+        <div class="news-sec-2 float-width">
+            <div class="float-width sec-cont3">
+                <div class="polls-cont">
+                    <h3 class="sec-title text-left">لوريم ايبسوم</h3>
+                    <div class="polls-left blocky">
+                        <a href="#"><img alt="" class="polls-bg-img" src="img/401683.jpeg" style="display: inline-block;float: left;width: 50%;"
+                                height="150px"></a>
+                        <br>
+                        <h3 class="sec-title1 text-left">بقلم سعدي جوهر</h3>
+                        <div class="pol-lft-txt">
+                            <h6><span><i class="fa fa-comment-o"></i>21 عدد المقالات</span></h6>
+                            <p class="float-width"></p>
+                        </div>
+
+                    </div>
+                    <div class="polls-right lefty">
+                        <div class="pol-rt-sm float-width">
+                            <a href="#" class="lefty pol-rt-img"><img alt="" src="img/samples/m1.jpg"></a>
+                            <h5 class="text-right">لوريم ايبسوم</h5>
+                            <br><br>
+                            <h6 class="lefty"><span><i class="fa fa-clock-o"></i>20 يناير 2014</span><span><i class="fa fa-comment-o"></i>21
+                                    تعليق</span></h6>
+
+                        </div>
+                        <div class="pol-rt-sm float-width">
+                            <a href="#" class="lefty pol-rt-img"><img alt="" src="img/samples/m2.jpg"></a>
+                            <h5>لوريم ابيسوم</h5>
+                            <br><br>
+                            <h6 class="lefty"><span><i class="fa fa-clock-o"></i>20 يناير 2014</span><span><i class="fa fa-comment-o"></i>21
+                                    تعليق</span></h6>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {{ end }}

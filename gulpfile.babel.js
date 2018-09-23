@@ -22,16 +22,11 @@ if (process.env.DEBUG) {
 
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
-gulp.task("build", ["css", "js", "hugo"]);
+gulp.task("build", ["js", "hugo"]);
 gulp.task("build-preview", ["css", "js", "hugo-preview"]);
 
 gulp.task("css", () => (
-  gulp.src("./src/css/*.css")
-    .pipe(postcss([
-      cssImport({from: "./src/css/main.css"}),
-      cssnext(),
-      cssnano(),
-    ]))
+  gulp.src("./src/css/*.css")   
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
 ));
