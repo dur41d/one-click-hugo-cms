@@ -22,14 +22,39 @@ if (process.env.DEBUG) {
 
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
-gulp.task("build", ["js", "hugo"]);
+gulp.task("build", ["css", "fonts", "js", "js2", "img", "images", "svg", "hugo"]);
 gulp.task("build-preview", ["css", "js", "hugo-preview"]);
 
 gulp.task("css", () => (
-  gulp.src("./src/css/*.css")   
+  gulp.src("./src/css/**/*.css")   
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
 ));
+
+gulp.task("fonts", () => (
+  gulp.src("./src/fonts/**/*.*")   
+    .pipe(gulp.dest("./dist/fonts"))
+    .pipe(browserSync.stream())
+));
+
+gulp.task("js2", () => (
+  gulp.src("./src/js2/**/*.*")   
+    .pipe(gulp.dest("./dist/js2"))
+    .pipe(browserSync.stream())
+));
+
+gulp.task("img", () => (
+  gulp.src("./src/img/**/*.*")   
+    .pipe(gulp.dest("./dist/img"))
+    .pipe(browserSync.stream())
+));
+
+gulp.task("images", () => (
+  gulp.src("./src/images/**/*.*")   
+    .pipe(gulp.dest("./dist/images"))
+    .pipe(browserSync.stream())
+));
+
 
 gulp.task("js", (cb) => {
   const myConfig = Object.assign({}, webpackConfig);
@@ -61,7 +86,7 @@ gulp.task("svg", () => {
     .pipe(gulp.dest("site/layouts/partials/"));
 });
 
-gulp.task("server", ["hugo", "css", "js", "svg"], () => {
+gulp.task("server", ["hugo", "css", "fonts", "js", "js2", "img", "images", "svg"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
