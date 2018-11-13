@@ -43,6 +43,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "author"
         widget: "relation"
         collection: "authors"
+        required: false
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title"]
