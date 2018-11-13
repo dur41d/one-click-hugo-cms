@@ -5,3 +5,4 @@ disableHugoGeneratorInject = true
 
 [taxonomies]
 section = "section"
+
