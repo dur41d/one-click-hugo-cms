@@ -1,16 +1,25 @@
 {{ define "main" }}
+<div class="container">
+    <!-- Main Left side -->
+    <div class="main-left-side">
+       <!-- Single Category - Top News -->
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Latest stories") }}
+            <!-- Single Category News Blocks -->
+            <div class="news-sec-1 float-width">
+                <div class="float-width sec-cont2">
+                   <h3 class="sec-title">المولفين </h3>
+            
+                {{ range .Pages }}
+                    <div class="sec-1-big float-width">
+                        <img alt="" class="blocky" src="{{.Params.image}}" />
+                        <div class="sec-1-big-text lefty">
+                        <h3>{{ .Params.title }}</h3>
+                        </div>
+                    </div>
+                {{ end }}
 
-<div class="mw7 center">
-  <ul class="flex-ns flex-wrap mhn1-ns pa3">
-      {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
-          <div class="w-50-ns ph1-ns flex">
-            {{ .Render "li"}}
-          </div>
-      {{ end }}
-  </ul>
-  {{ partial "pagination" . }}
-</div>
-
+                </div>
+            </div>
+        </div>
+     </div>
 {{end}}
