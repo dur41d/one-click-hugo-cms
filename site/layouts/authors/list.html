@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="container">
+    <!-- Main Left side -->
+    <div class="main-left-side">
+       <!-- Single Category - Top News -->
+
+            <!-- Single Category News Blocks -->
+            <div class="news-sec-1 float-width">
+                <div class="float-width sec-cont2">
+                   <h3 class="sec-title">المولفين </h3>
+            
+                {{ range .Pages }}
+                    <div class="sec-1-big float-width">
+                        <img alt="" class="blocky" src="{{.Params.image}}" />
+                        <div class="sec-1-big-text lefty">
+                        <h3>{{ .Params.title }}</h3>
+                        </div>
+                    </div>
+                {{ end }}
+
+                </div>
+            </div>
+        </div>
+     </div>
+{{end}}
