@@ -11,7 +11,11 @@
             
                 {{ range .Pages }}
                     <div class="sec-1-big float-width">
+                        {{ if (isset .Params "image") }}
                         <img alt="" class="blocky" src="{{.Params.image}}" />
+                        {{ else if (isset .Params "author.image") }}
+                        <img alt="" class="blocky" src="{{.Params.author.image}}" />
+                        {{ end }}
                         <div class="sec-1-big-text lefty">
                         <h3>{{ .Params.title }}</h3>
                         </div>
